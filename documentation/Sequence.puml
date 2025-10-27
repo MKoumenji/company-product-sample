@@ -1,0 +1,44 @@
+﻿@startuml
+actor Main as W
+participant Application as I
+participant DB as Db
+participant Service as O
+
+
+loop [check Start Every x Minutes]
+    W -> I : "Start"
+   activate I
+   I -> Db : "Check if all orders have been imported"
+   activate Db
+   Db --> I : "All Orders were Successfully procssed"
+   deactivate Db
+   
+   alt [alt There are pending orders]
+       I -> O : "Dispach pending orders"
+       activate O
+       O --> I : "Pending orders dispached"
+       deactivate O
+      
+       I -> Db: "Validate dispached orders"
+       activate Db
+       Db --> I : "Dispach validated"
+       deactivate Db
+       
+       alt [alt Dispach failed]
+       I -> O : "Restart OrderHandler"
+       activate O
+       O --> I : "OrderHandler restarted"
+       deactivate O
+       I -> O : "Dispach pending orders"
+       activate O
+       O --> I : "Pending orders dispached"
+       deactivate O
+   end
+end
+I --> W : "Done"
+deactivate I
+end
+
+
+
+@enduml
