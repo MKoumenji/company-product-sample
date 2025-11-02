@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Domain", "src\Company.Product.Domain\Company.Product.Domain.csproj", "{2C60FA77-1260-4A95-8C6B-AC547306E9B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F007279F-5769-4C2C-9B36-B5C70E0D8C50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A8059A85-A8DA-47A8-8BE4-C8CD352B07FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Infrastructure", "src\Company.Product.Infrastructure\Company.Product.Infrastructure.csproj", "{144F3BA6-002C-4F2A-BDCC-9DFB33A71876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Infrastructure.Tests", "test\Company.Product.Infrastructure.Tests\Company.Product.Infrastructure.Tests.csproj", "{9F1417BE-5ED1-4076-89F7-4C3E20DF1001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{05BC5942-512A-4448-830A-3C3D097B9667}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\UseCase.puml = documentation\UseCase.puml
+		documentation\Sequence.puml = documentation\Sequence.puml
+		documentation\Component.puml = documentation\Component.puml
+		documentation\UseCase.md = documentation\UseCase.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Application", "src\Company.Product.Application\Company.Product.Application.csproj", "{EADD46BA-166D-4478-9629-3014C652553B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Presentation", "src\Company.Product.Presentation\Company.Product.Presentation.csproj", "{68EFDACD-EF94-42F5-A932-E9390E4CAA49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Application.Tests", "test\Company.Product.Application.Tests\Company.Product.Application.Tests.csproj", "{B33881D3-DBEC-43B8-A19C-B1D7D3A90AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Product.Domain.Tests", "test\Company.Product.Domain.Tests\Company.Product.Domain.Tests.csproj", "{480306C5-E7BC-4951-BFA8-1B4F4986A8F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C60FA77-1260-4A95-8C6B-AC547306E9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C60FA77-1260-4A95-8C6B-AC547306E9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C60FA77-1260-4A95-8C6B-AC547306E9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C60FA77-1260-4A95-8C6B-AC547306E9B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144F3BA6-002C-4F2A-BDCC-9DFB33A71876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144F3BA6-002C-4F2A-BDCC-9DFB33A71876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144F3BA6-002C-4F2A-BDCC-9DFB33A71876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144F3BA6-002C-4F2A-BDCC-9DFB33A71876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1417BE-5ED1-4076-89F7-4C3E20DF1001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1417BE-5ED1-4076-89F7-4C3E20DF1001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1417BE-5ED1-4076-89F7-4C3E20DF1001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1417BE-5ED1-4076-89F7-4C3E20DF1001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADD46BA-166D-4478-9629-3014C652553B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADD46BA-166D-4478-9629-3014C652553B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADD46BA-166D-4478-9629-3014C652553B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADD46BA-166D-4478-9629-3014C652553B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EFDACD-EF94-42F5-A932-E9390E4CAA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EFDACD-EF94-42F5-A932-E9390E4CAA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EFDACD-EF94-42F5-A932-E9390E4CAA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EFDACD-EF94-42F5-A932-E9390E4CAA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B33881D3-DBEC-43B8-A19C-B1D7D3A90AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B33881D3-DBEC-43B8-A19C-B1D7D3A90AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B33881D3-DBEC-43B8-A19C-B1D7D3A90AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B33881D3-DBEC-43B8-A19C-B1D7D3A90AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480306C5-E7BC-4951-BFA8-1B4F4986A8F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480306C5-E7BC-4951-BFA8-1B4F4986A8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480306C5-E7BC-4951-BFA8-1B4F4986A8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480306C5-E7BC-4951-BFA8-1B4F4986A8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C60FA77-1260-4A95-8C6B-AC547306E9B4} = {F007279F-5769-4C2C-9B36-B5C70E0D8C50}
+		{144F3BA6-002C-4F2A-BDCC-9DFB33A71876} = {F007279F-5769-4C2C-9B36-B5C70E0D8C50}
+		{9F1417BE-5ED1-4076-89F7-4C3E20DF1001} = {A8059A85-A8DA-47A8-8BE4-C8CD352B07FD}
+		{EADD46BA-166D-4478-9629-3014C652553B} = {F007279F-5769-4C2C-9B36-B5C70E0D8C50}
+		{68EFDACD-EF94-42F5-A932-E9390E4CAA49} = {F007279F-5769-4C2C-9B36-B5C70E0D8C50}
+		{B33881D3-DBEC-43B8-A19C-B1D7D3A90AFA} = {A8059A85-A8DA-47A8-8BE4-C8CD352B07FD}
+		{480306C5-E7BC-4951-BFA8-1B4F4986A8F4} = {A8059A85-A8DA-47A8-8BE4-C8CD352B07FD}
+	EndGlobalSection
+EndGlobal

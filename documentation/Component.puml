@@ -1,0 +1,60 @@
+﻿@startuml
+skinparam componentStyle uml2
+skinparam backgroundColor white
+skinparam monochrome false
+
+' Hauptpaket für das gesamte System
+package "Company.Product" {
+   
+    ' Domain Layer
+       package "Domain" {
+           [Company.Product.Domain] as domain
+       }
+       
+    ' Application Logic Layer
+    package "Application" {
+        [Company.Product.Application] as application
+    }
+    
+    ' Infrastructure Layer
+    package "Infrastructure" {
+        [Company.Product.Infrastructure] as infrastructure
+    }
+    
+    ' Worker Layer
+    package "Presentation" {
+        [Company.Product.Presentation] as presentation
+    }
+
+    ' Test Layer
+    package "Tests" {
+        [Company.Product.Infrastructure.Tests] as infrastructureTests
+        [Company.Product.Application.Tests] as applicationTests
+        [Company.Product.Domain.Tests] as domainTests
+    }
+}
+
+' Beziehungen zwischen den Komponenten
+application --> domain  
+infrastructure --> application
+infrastructure --> domain 
+presentation --> application
+presentation --> infrastructure :DI
+presentation --> domain :DI
+
+' Test-Abhängigkeiten
+applicationTests --> application
+infrastructureTests --> infrastructure 
+domainTests --> domain 
+' Legende
+legend right
+  ' Ergänzte Erläuterung der Schichten:
+  ------ Schicht Beschreibungen ------
+  [Domain] - Entählt die Geschäftslogik und Geschäftsmodelle
+  [Application - Enthält die Implementierung der Use cases
+  [Infrastructure] - Enhählt die externen Dienste, Datenbanken, APIs und Infrastrukturkomponenten
+  [Presentation] - Startpunkt
+  [Tests] - Enthält Unit-, Integrations- und End-to-End-Tests
+endlegend
+
+@enduml

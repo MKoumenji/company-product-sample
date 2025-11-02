@@ -1,0 +1,54 @@
+﻿@startuml
+' Direction: Horizontal for better clarity
+left to right direction
+
+' Define actor
+actor Handler <<Application>>
+
+' Main processes
+usecase "Retrieve Orders" as UC1
+usecase "Review Orders" as UC2
+usecase "Dispatch Pending Orders" as UC3
+usecase "Validate Dispatched Orders" as UC4
+usecase "Restart the OrderHandler" as UC5
+usecase "Log Behavior" as UC6
+usecase "Report Warning" as UC7
+
+' Actor relationships
+Handler --> UC1 
+Handler --> UC2 
+Handler --> UC3 
+Handler --> UC4 
+Handler --> UC5
+
+' Relationships between use cases
+UC1 -.-> UC2 : «includes»
+UC2 -.-> UC3 : «extends» 
+note on link
+Triggered when pending orders are available.
+end note
+UC3 -.-> UC4 : «includes»
+UC4 -.-> UC5 : «extends»
+note on link
+Triggered when pending orders are missing from the order handler.
+end note
+
+' Logging
+UC1 -.-> UC6 : «includes»
+UC2 -.-> UC6 : «includes»
+UC3 -.-> UC6 : «includes»
+UC4 -.-> UC6 : «includes»
+UC5 -.-> UC6 : «includes»
+
+' Reporting
+UC5 -.-> UC7 : «includes»
+
+' Legend for diagram clarification
+legend left
+| **Symbol**     | **Explanation**              |
+|-----------------|------------------------------|
+| <<Application>> | Software actor               |
+| «includes»      | Mandatory dependency         |
+| «extends»       | Optional process (extension) |
+endlegend
+@enduml
